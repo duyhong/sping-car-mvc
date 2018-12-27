@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context  docBase="spring-car-mvc" path="/spring-car-mvc">
+    Specify a JDBC datasource
+    <Resource name="jdbc/cpool" auth="Container"
+        type="javax.sql.DataSource" username="root" password="Kh0ng Biet D@u"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/Testing?useSSL=false"
+        maxActive="500" maxIdle="150" />
+</Context>
