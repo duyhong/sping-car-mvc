@@ -16,7 +16,7 @@ public class CarEntity {
 	private String color;
 	private String vendor;
 	private String power;
-	private String milage;
+	private String mileage;
 	private String image;
 
 	@Id
@@ -67,12 +67,12 @@ public class CarEntity {
 	}
 
 	@Column(length=100)
-	public String getMilage() {
-		return milage;
+	public String getMileage() {
+		return mileage;
 	}
 
-	public void setMilage(String milage) {
-		this.milage = milage;
+	public void setMileage(String mileage) {
+		this.mileage = mileage;
 	}
 
 	@Column(name="image",columnDefinition="longblob")

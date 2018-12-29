@@ -24,6 +24,7 @@ public class VendorService implements IVendorService {
 	public List<String> findVendors(){
 		
 		List<VendorEntity> vendorEntities=vendorDaoRepository.findAll();
+		System.out.println(vendorEntities);
 		List<String>  list=new ArrayList<>();
 		for(VendorEntity vendorEntity:vendorEntities){
 			list.add(vendorEntity.getVendorName());

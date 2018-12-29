@@ -19,7 +19,7 @@
    	  				getBase64(file)
    	  				.then(function (data) {
    	  					// data = base64 encoded image 
-   	  					 $('#photo').val(data);
+   	  					 $('#image').val(data);
    	  					//<img src="" id="review-photo"  style="height: 80px;">
    	  					$('#review-photo').attr('src', data);
    	  				}).catch(function (e) {
@@ -31,7 +31,7 @@
 					alert("@()@(@(@(@(@()))))"); 
 					//Here we have to write code to send popup form data to the controller
 					//AJAX only.
-					var pdata = $('#cform').serialize();//name, email ,mobile,gender,city
+					var pdata = $('#cform').serialize();//cid, name, email ,mobile,gender,city
 					//here we are not sending json data , we are sending form data
 					//name=Pocker&email=pocker%40gmail.com&gender=Male&mobile=0292929229&photo=&city=Oakland&id=
 					//$.get ,$.post
@@ -49,7 +49,7 @@
 								erowobj.find('[tdname=color]').html($("#color").val());
 								erowobj.find('[tdname=power]').html($("#power").val());
 								erowobj.find('[tdname=mileage]').html($("#mileage").val());
-								erowobj.find('[tdname=rowphoto]').attr("src",$("#photo").val());
+								erowobj.find('[tdname=rowphoto]').attr("src",$("#image").val());
 								
 								$("#editCarModel").modal("hide");	
 								
@@ -106,6 +106,7 @@
    				var imageValue=carRow.find('[tdname=rowphoto]').attr("src");
    				
    				//setting name field inside the modal name
+   				$("#cid").val(cid);
    				$("#vendor").val(tvendor);
    				$("#model").val(tmodel);
    				$("#color").val(tcolor);
@@ -229,11 +230,11 @@
 								class="form-control-file" id="tphoto" accept="image/*"> 
 								
 								<input
-								id="photo" name="photo" type="hidden"
+								id="image" name="image" type="hidden"
 								value="">
 						</div>
 						
-						<input type="hidden" id="id" name="id" value="">
+						<input type="hidden" id="cid" name="cid" value="">
 					
 				</div>
 				<div class="modal-footer">

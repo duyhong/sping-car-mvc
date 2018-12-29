@@ -56,7 +56,7 @@ public class CarHibernateDao implements ICarDao {
 			dcarEntity.setModel(car.getModel());
 			dcarEntity.setColor(car.getColor());
 			dcarEntity.setPower(car.getPower());
-			dcarEntity.setMilage(car.getMilage());
+			dcarEntity.setMileage(car.getMileage());
 		}catch(NoResultException exception){
 			return "fail";
 		}

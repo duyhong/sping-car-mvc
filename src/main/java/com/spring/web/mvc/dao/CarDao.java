@@ -39,7 +39,7 @@ public class CarDao implements ICarDao {
 	public String updateCar(CarEntity car){
 		System.out.println("Before Updating\n");
 		String sql="update profile set vendor=?,model=?,color=?,power=?,image=? where cid=?";
-		Object data[] = new Object[]{car.getVendor(),car.getModel(),car.getColor(),car.getPower(),car.getMilage(),car.getImage()};
+		Object data[] = new Object[]{car.getVendor(),car.getModel(),car.getColor(),car.getPower(),car.getMileage(),car.getImage()};
 		jdbcTemplate.update(sql,data);	
 		return "success";
 	}
@@ -52,7 +52,7 @@ public class CarDao implements ICarDao {
 		System.out.println("Transaction status = "+b);
 		System.out.println("Before saving\n");
 		String sql1="insert into cars_tbl(vendor,model,color,power,mileage,image) values(?,?,?,?,?,?)";
-		Object data[] = new Object[]{car.getVendor(),car.getModel(),car.getColor(),car.getPower(),car.getMilage(),car.getImage()};
+		Object data[] = new Object[]{car.getVendor(),car.getModel(),car.getColor(),car.getPower(),car.getMileage(),car.getImage()};
 		System.out.println(jdbcTemplate);
 		//Query1
 		jdbcTemplate.update(sql1,data);

@@ -20,7 +20,7 @@
   				getBase64(file)
   				.then(function (data) {
   					// data = base64 encoded image 
-  					 $('#photo').val(data);
+  					 $('#image').val(data);
   					//<img src="" id="review-photo"  style="height: 80px;">
   					$('#review-photo').attr('src', data);
   				}).catch(function (e) {
@@ -121,7 +121,7 @@
      <div class="form-group">
       <label for="image">Image:</label>
       <input type="file" class="form-control" id="tphoto"  name="tphoto" style="width: 35%;display: inline;">
-       <input type="hidden" id="photo"  name="photo" style="width: 35%;display: inline;">
+       <input type="hidden" id="image"  name="image" style="width: 35%;display: inline;">
        <img src="" id="review-photo"  style="height: 80px;">
     </div>
     

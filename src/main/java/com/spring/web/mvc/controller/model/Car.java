@@ -7,7 +7,7 @@ public class Car {
 	private String color;
 	private String vendor;
 	private String power;
-	private String milage;
+	private String mileage;
 	private String image;
 
 	public int getCid() {
@@ -28,7 +28,7 @@ public class Car {
 		this.color = color;
 		this.vendor = vendor;
 		this.power = power;
-		this.milage = milage;
+		this.mileage = mileage;
 		this.image = image;
 	}
 
@@ -64,12 +64,12 @@ public class Car {
 		this.power = power;
 	}
 
-	public String getMilage() {
-		return milage;
+	public String getMileage() {
+		return mileage;
 	}
 
-	public void setMilage(String milage) {
-		this.milage = milage;
+	public void setMileage(String mileage) {
+		this.mileage = mileage;
 	}
 
 	public String getImage() {
@@ -83,7 +83,7 @@ public class Car {
 	@Override
 	public String toString() {
 		return "Car [cid=" + cid + ", model=" + model + ", color=" + color + ", vendor=" + vendor + ", power=" + power
-				+ ", milage=" + milage + ", image=" + image + "]";
+				+ ", milage=" + mileage + ", image=" + image + "]";
 	}
 
 }
